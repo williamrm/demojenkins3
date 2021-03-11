@@ -3,3 +3,11 @@ plugins {
 	id 'eclipse'
 	id 'idea'
 }
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testCompile 'junit:junit:4.12'
+}
