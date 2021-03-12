@@ -13,7 +13,6 @@ repositories {
 
 dependencies {
 	testCompile 'junit:junit:4.12'
-  spotbugs 'com.github.spotbugs:spotbugs:4.0.0'
 }
 
 jacocoTestReport {
