@@ -20,7 +20,7 @@ public class CalculatorTest {
 	public void testAdd() {
 		int a = 2;
 		int b = 3;
-		
+	
 
 		Calculator calc = new Calculator();
 		int actual = calc.add(a,b);
