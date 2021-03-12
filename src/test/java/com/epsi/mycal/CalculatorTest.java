@@ -77,11 +77,13 @@ public class CalculatorTest {
   public void testIsPremier() {
     int a = 0;
     int b = 17;
-    int c = 5;
+    int c = 15;
+    int d = -42;
 
     Calculator calc = new Calculator();
     assertTrue(calc.isPremier(b));
     assertFalse(calc.isPremier(a));
     assertFalse(calc.isPremier(c));
+    assertFalse(calc.isPremier(d));
   }
 }
