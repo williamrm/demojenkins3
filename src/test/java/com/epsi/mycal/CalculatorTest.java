@@ -76,7 +76,7 @@ public class CalculatorTest {
   @Test
   public void testIsPremier() {
     int a = 0;
-    int b = 14;
+    int b = 17;
     int c = 5;
 
     Calculator calc = new Calculator();
