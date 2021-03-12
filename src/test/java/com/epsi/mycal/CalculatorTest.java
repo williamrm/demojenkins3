@@ -62,5 +62,15 @@ public class CalculatorTest {
     assertEquals(2, actual);
     assertEquals(-1, err);
   }
+  
+  @Test
+  public void testCheckPair() {
+    int a = 4;
+    int b = 3;
+
+    Calculator calc = new Calculator();
+    assertTrue(calc.checkPair(a));
+    assertFalse(calc.checkPair(b));
+  }
 
 }
