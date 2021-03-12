@@ -72,5 +72,16 @@ public class CalculatorTest {
     assertTrue(calc.checkPair(a));
     assertFalse(calc.checkPair(b));
   }
+  
+  @Test
+  public void testIsPremier() {
+    int a = 0;
+    int b = 14;
+    int c = 5;
 
+    Calculator calc = new Calculator();
+    assertTrue(calc.isPremier(b));
+    assertFalse(calc.isPremier(a));
+    assertFalse(calc.isPremier(c));
+  }
 }
