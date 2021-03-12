@@ -33,7 +33,7 @@ public class Calculator {
 
   public boolean isPremier(int ValA) {
     boolean isPremier = true;
-    if (ValA < 0) {
+    if (ValA <= 1) {
       isPremier = false;
     } else if (ValA != 0 && ValA != 1) {
       for (int i = 2; i <= ValA / 2; i++) {
