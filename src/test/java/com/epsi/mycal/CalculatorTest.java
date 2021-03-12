@@ -21,9 +21,10 @@ public class CalculatorTest {
 		int a = 2;
 		int b = 3;
 		
+
 		Calculator calc = new Calculator();
 		int actual = calc.add(a,b);
-		
+
 		assertEquals(5, actual);
 	}
 
@@ -31,10 +32,10 @@ public class CalculatorTest {
 	public void testSub() {
 		int a = 4;
 		int b = 2;
-		
+
 		Calculator calc = new Calculator();
 		int actual = calc.sub(a,b);
-		
+
 		assertEquals(2, actual);
 	}
 	
@@ -42,12 +43,12 @@ public class CalculatorTest {
 	public void testMul() {
 		int a = 4;
 		int b = 3;
-		
+
 		Calculator calc = new Calculator();
 		int actual = calc.mul(a,b);
-		
+
 		assertEquals(12, actual);
-		
+
 	}
 
 }
