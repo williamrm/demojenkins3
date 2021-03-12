@@ -26,18 +26,6 @@ jacocoTestReport {
 
 spotbugs {
     ignoreFailures = true
-    showProgress = true
-    effort = 'default'
-    reportLevel = 'default'
-    visitors = [ 'FindSqlInjection', 'SwitchFallthrough' ]
-    omitVisitors = [ 'FindNonShortCircuit' ]
-    reportsDir = file("$buildDir/spotbugs")
-    includeFilter = file("include.xml")
-    excludeFilter = file("exclude.xml")
-    onlyAnalyze = [ 'com.foobar.MyClass', 'com.foobar.mypkg.*' ]
-    maxHeapSize = '1g'
-    extraArgs = [ '-nested:false' ]
-    jvmArgs = [ '-Duser.language=ja' ]
 }
 
 def classesJava = "${project.buildDir}/classes/java/main/"
