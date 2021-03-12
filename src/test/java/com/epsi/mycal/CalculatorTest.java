@@ -38,6 +38,7 @@ public class CalculatorTest {
 		assertEquals(2, actual);
 	}
 	
+	@Test
 	public void testMul() {
 		int a = 4;
 		int b = 3;
