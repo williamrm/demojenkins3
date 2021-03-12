@@ -40,12 +40,12 @@ public class CalculatorTest {
 	
 	public void testMul() {
 		int a = 4;
-		int b = 2;
+		int b = 3;
 		
 		Calculator calc = new Calculator();
 		int actual = calc.mul(a,b);
 		
-		assertEquals(8, actual);
+		assertEquals(12, actual);
 		
 	}
 
