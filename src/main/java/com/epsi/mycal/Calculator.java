@@ -24,7 +24,7 @@ public class Calculator {
   
   public boolean checkPair(int valA) {
     int res = valA % 2;
-    if (res > 0) {
+    if (res == 0) {
       return true;
     } else {
       return false;
