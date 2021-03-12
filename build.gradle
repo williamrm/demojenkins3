@@ -4,6 +4,7 @@ plugins {
 	id 'idea'
 	id 'jacoco'
 	id 'checkstyle'
+	id "com.github.spotbugs" version "4.0.0"
 }
 
 repositories {
@@ -12,6 +13,7 @@ repositories {
 
 dependencies {
 	testCompile 'junit:junit:4.12'
+  spotbugs 'com.github.spotbugs:spotbugs:4.0.0'
 }
 
 jacocoTestReport {
@@ -22,10 +24,27 @@ jacocoTestReport {
 	}
 }
 
+spotbugs {
+    ignoreFailures = true
+    showProgress = true
+    effort = 'default'
+    reportLevel = 'default'
+    visitors = [ 'FindSqlInjection', 'SwitchFallthrough' ]
+    omitVisitors = [ 'FindNonShortCircuit' ]
+    reportsDir = file("$buildDir/spotbugs")
+    includeFilter = file("include.xml")
+    excludeFilter = file("exclude.xml")
+    onlyAnalyze = [ 'com.foobar.MyClass', 'com.foobar.mypkg.*' ]
+    maxHeapSize = '1g'
+    extraArgs = [ '-nested:false' ]
+    jvmArgs = [ '-Duser.language=ja' ]
+}
+
 def classesJava = "${project.buildDir}/classes/java/main/"
 	checkstyle {
 	    toolVersion = "6.3"
 }
+
 task checkstyleMain (type: Checkstyle, overwrite: true) {
     ignoreFailures = true
     showViolations = false
